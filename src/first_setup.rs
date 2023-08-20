@@ -10,7 +10,6 @@ pub fn first_setup(config: Config, options: eframe::NativeOptions) -> Config {
         || config.twitch_bot_username == ""
         || config.twitch_bot_token == ""
         || config.twitch_channel_name == ""
-        || config.interface_language == ""
     {
         let config_mut = Rc::new(Mutex::new(config));
         /*
