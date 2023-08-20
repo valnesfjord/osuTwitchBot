@@ -254,9 +254,6 @@ struct FirstSetup {
     pub config: Rc<Mutex<Config>>,
 }
 impl eframe::App for FirstSetup {
-    fn on_close_event(&mut self) -> bool {
-        process::exit(1)
-    }
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         egui::CentralPanel::default().show(ctx, |ui| {
             ui.heading(self.setting_name.clone());
